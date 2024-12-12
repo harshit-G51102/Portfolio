@@ -1,28 +1,33 @@
 import Head from "next/head";
 import {
-  AiFillTwitterCircle,
+ 
   AiFillLinkedin,
-  AiFillYoutube,
+  
   AiFillGithub,
-  AiFillCode,
+  
   AiFillCopyrightCircle,
 } from "react-icons/ai";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState } from "react";
 import deved from "../public/dev-ed-wave.png";
-import code from "../public/code.png";
-import design from "../public/design.png";
-import consulting from "../public/consulting.png";
+
 import Image from "next/image";
-import web1 from "../public/web1.png";
-import web2 from "../public/web2.png";
-import web3 from "../public/web3.png";
-import web4 from "../public/web4.png";
-import web5 from "../public/web5.png";
-import web6 from "../public/web6.png";
+import { useEffect} from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
+  useEffect(() => {
+    const storedDarkMode = localStorage.getItem("darkMode");
+    if (storedDarkMode !== null) {
+      setDarkMode(JSON.parse(storedDarkMode));
+    }
+  }, []);
+  const toggleDarkMode = () => {
+    const newDarkMode = !darkMode;
+    setDarkMode(newDarkMode);
+    localStorage.setItem("darkMode", JSON.stringify(newDarkMode));
+  };
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -33,13 +38,16 @@ export default function Home() {
       </Head>
       <main className=" bg-white px-10 dark:bg-gray-900">
         <section className="min-h-screen">
-          <nav className="py-10 mb-12 flex justify-between dark:text-white md:px-20 lg:px-40">
-            <h1 className="font-burtons text-xl">harshit'sPortfolio</h1>
-            <ul className="flex items-center">
+          <nav className="py-10 mb-12 gap-8 flex flex-wrap  justify-between dark:text-white md:px-20 lg:px-40">
+            <h1 className="font-burtons text-xl text-center w-full md:w-auto"><Link href='/'>harshit'sPortfolio</Link></h1>
+            <ul className="flex flex-wrap items-center justify-center gap-4 w-full md:w-auto">
+              <li>
+                <Link href='/projects'>PROJECTS</Link>
+              </li>
               <li>
                 <BsFillMoonStarsFill
-                  onClick={() => setDarkMode(!darkMode)}
-                  className=" cursor-pointer text-2xl"
+                  onClick={toggleDarkMode}
+                  className=" cursor-pointer text-2xl ml-8"
                 />
               </li>
               <li>
