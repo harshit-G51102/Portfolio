@@ -83,7 +83,7 @@ function Projects() {
                             </div>
                             <Link
                                 className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2  m-2 border-none rounded-md mt-auto"
-                                href="#"
+                                href="projects/foodOrdering"
                                 
                             >
                                 Details
@@ -103,7 +103,7 @@ function Projects() {
                             </div>
                             <Link
                                 className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2  m-2 border-none rounded-md mt-auto"
-                                href="#"
+                                href="projects/meetups"
                                 
                             >
                                 Details
@@ -125,7 +125,7 @@ function Projects() {
                             </div>
                             <Link
                                 className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 m-2 border-none rounded-md mt-auto"
-                                href="#" // Path to your resume PDF
+                                href="projects/quotes" // Path to your resume PDF
                             >
                                 Details
                             </Link>
