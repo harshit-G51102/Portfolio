@@ -67,7 +67,7 @@ function Projects() {
                         <div className="text-center shadow-lg  rounded-xl my-10  dark:bg-white flex-1 flex flex-col">
                             <a href="https://mern-food-ordering-app-frontend-r3on.onrender.com/" target="_blank"
                                 rel="noopener noreferrer"><Image src={design} width={1000} height={100} className="rounded-xl -m-8 shadow-lg" /></a>
-                            <div className="">
+                            <div className="p-10 flex-grow">
                                 <h3 className="text-lg font-medium pt-8 pb-2  ">
                                     MERN Food Ordering Project
                                 </h3>
