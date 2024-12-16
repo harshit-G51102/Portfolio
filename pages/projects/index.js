@@ -6,6 +6,7 @@ import quotes from "../../public/quotes.png";
 import Image from "next/image";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import Link from "next/link";
+import { AiFillCarryOut, AiFillGithub, AiOutlineExport } from "react-icons/ai";
 
 
 function Projects() {
@@ -63,15 +64,28 @@ function Projects() {
                             Dive into my journey as a third-year B.Tech student at IIIT Jabalpur, showcasing real-world applications and innovative designs built with modern technologies.
                         </p>
                     </div>
-                    <div className="lg:flex gap-10">
+                    <div className="grid-cols-1 md:grid grid-cols-3 gap-10 p-10">
                         <div className="text-center shadow-lg  rounded-xl my-10  dark:bg-white flex-1 flex flex-col">
-                            <a href="https://mern-food-ordering-app-frontend-r3on.onrender.com/" target="_blank"
-                                rel="noopener noreferrer"><Image src={design} width={1000} height={100} className="rounded-xl -m-8 shadow-lg" /></a>
-                            <div className="p-10 flex-grow">
+                            {/* <div className="relative h-56 w-full text-5xl group rounded-xl md:-m-8 shadow-lg bg-[url('/merneats.png')] bg-cover bg-center">
+                                <div className="absolute rounded-xl inset-0 group-hover:bg-white group-hover:bg-opacity-50 "></div>
+
+                                <div className="flex flex-row gap-4 mt-24 ml-40 absolute opacity-0 group-hover:opacity-100">
+                                <AiOutlineExport></AiOutlineExport>
+                                <AiFillGithub></AiFillGithub>
+                                </div>
+
+                            </div> */}
+                            <Image src={design} width={1000} height={100} className="rounded-xl -m-8 shadow-lg" />
+                                <div className="flex ml-auto text-5xl text-blue-500 bg-white border-2 border-sky-500 -mr-2 rounded-xl">
+                                    <a href="https://mern-food-ordering-app-frontend-r3on.onrender.com/" target="_blank"
+                                rel="noopener noreferrer"><AiOutlineExport></AiOutlineExport></a>
+                                </div>
+                            <div className=" flex-grow">
                                 <h3 className="text-lg font-medium pt-8 pb-2  ">
                                     MERN Food Ordering Project
                                 </h3>
                                 <h4 className="py-4 text-teal-600">Tools</h4>
+                                <div className="grid grid-cols-3">
                                 <p className="text-gray-800 py-1">React</p>
                                 <p className="text-gray-800 py-1">React Route</p>
                                 <p className="text-gray-800 py-1">TypeScript</p>
@@ -80,48 +94,61 @@ function Projects() {
                                 <p className="text-gray-800 py-1">Auth0</p>
                                 <p className="text-gray-800 py-1">Tailwind</p>
                                 <p className="text-gray-800 py-1">Shadcn</p>
+                                </div>
                             </div>
                             <Link
                                 className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2  m-2 border-none rounded-md mt-auto"
                                 href="projects/foodOrdering"
-                                
+
                             >
                                 Details
                             </Link>
                         </div>
                         <div className="text-center shadow-lg rounded-xl my-10 dark:bg-white flex-1 flex flex-col">
-                            <a href="http://nextjs-meetups-pi-ten.vercel.app/" target="_blank"
-                                rel="noopener noreferrer"><Image src={meetups} width={1000} height={100} className="rounded-xl -m-8 shadow-lg" /></a>
-                            <div className="p-10 flex-grow">
+                            <Image src={meetups} width={1000} height={100} className="rounded-xl -m-8 shadow-lg" /> 
+                             <div className="flex ml-auto text-5xl text-blue-500 bg-white border-2 border-sky-500 -mr-2 rounded-xl">
+                                    <a href="http://nextjs-meetups-pi-ten.vercel.app/" target="_blank"
+                                rel="noopener noreferrer"><AiOutlineExport></AiOutlineExport></a>
+                                    
+                                </div>
+                            <div className=" flex-grow">
                                 <h3 className="text-lg font-medium pt-8 pb-2">
                                     NEXT JS React Meetups
                                 </h3>
                                 <h4 className="py-4 text-teal-600">Tools</h4>
-                                <p className="text-gray-800 py-1">Nextjs</p>
+                                <div className="grid grid-cols-3"><p className="text-gray-800 py-1">Nextjs</p>
                                 <p className="text-gray-800 py-1">React</p>
-                                <p className="text-gray-800 py-1">vercel</p>
+                                <p className="text-gray-800 py-1">vercel</p></div>
+                                
                             </div>
                             <Link
                                 className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2  m-2 border-none rounded-md mt-auto"
                                 href="projects/meetups"
-                                
+
                             >
                                 Details
                             </Link>
                         </div>
 
                         <div className="text-center shadow-lg  rounded-xl my-10  dark:bg-white flex-1 flex flex-col">
-                            <a href="http://hosting-a608c.web.app/" target="_blank"
-                                rel="noopener noreferrer"><Image src={quotes} width={1400} height={100} className="rounded-xl -m-8 shadow-lg" /></a>
-                            <div className="p-10">
+                        <Image src={quotes} width={1400} height={100} className="rounded-xl -m-8 shadow-lg" />
+                            <div className="flex ml-auto text-5xl text-blue-500 bg-white border-2 border-sky-500 -mr-2 rounded-xl">
+                                    <a href="http://hosting-a608c.web.app/" target="_blank"
+                                rel="noopener noreferrer"> <AiOutlineExport></AiOutlineExport></a>
+                                   
+                                </div>
+                            <div>
                                 <h3 className="text-lg font-medium pt-8 pb-2  ">
                                     React Multi-Page Quotes Application
                                 </h3>
                                 <h4 className="py-4 text-teal-600">Tools</h4>
+                                <div className="grid grid-cols-3">
                                 <p className="text-gray-800 py-1">React</p>
                                 <p className="text-gray-800 py-1">React Router</p>
                                 <p className="text-gray-800 py-1">Firebase</p>
                                 <p className="text-gray-800 py-1">React hooks</p>
+                                </div>
+                                
                             </div>
                             <Link
                                 className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 m-2 border-none rounded-md mt-auto"
