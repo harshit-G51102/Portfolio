@@ -42,14 +42,11 @@ export default function Home() {
           <nav className="py-10 mb-12 gap-8 flex flex-wrap  justify-between dark:text-white md:px-20 lg:px-40">
             <h1 className="font-burtons text-xl text-center w-full md:w-auto"><Link href='/'>harshit'sPortfolio</Link></h1>
             <ul className="flex flex-wrap items-center justify-center gap-4 w-full md:w-auto">
-              <li>
-                <Link href='/projects'>PROJECTS</Link>
+            <li>
+                <Link href='/projects'>EDUCATION</Link>
               </li>
               <li>
-                <BsFillMoonStarsFill
-                  onClick={toggleDarkMode}
-                  className=" cursor-pointer text-2xl ml-8"
-                />
+                <Link href='/projects' className="ml-8">PROJECTS</Link>
               </li>
               <li>
                 <Link
@@ -60,6 +57,12 @@ export default function Home() {
                 >
                   Resume
                 </Link>
+              </li>
+              <li>
+                <BsFillMoonStarsFill
+                  onClick={toggleDarkMode}
+                  className=" cursor-pointer text-2xl ml-8"
+                />
               </li>
             </ul>
           </nav>
