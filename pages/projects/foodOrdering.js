@@ -10,7 +10,7 @@ import food5 from "../../public/food5.png"
 import Image from "next/image";
 
 
-function foodOrdering() {
+function FoodOrdering() {
     const [darkMode, setDarkMode] = useState(true);
     useEffect(() => {
         const storedDarkMode = localStorage.getItem("darkMode");
@@ -32,7 +32,7 @@ function foodOrdering() {
             </Head>
             <main className=" bg-white px-10 dark:bg-gray-900 min-h-[100vh] pb-8">
             <nav className="py-10 mb-12 gap-8 flex flex-wrap  justify-between dark:text-white md:px-20 lg:px-40">
-            <h1 className="font-burtons text-xl text-center w-full md:w-auto"><Link href='/'>harshit'sPortfolio</Link></h1>
+            <h1 className="font-burtons text-xl text-center w-full md:w-auto"><Link href='/'>harshit&apos;sPortfolio</Link></h1>
             <ul className="flex flex-wrap items-center justify-center gap-4 w-full md:w-auto">
             <li>
                 <Link href='/education'>EDUCATION</Link>
@@ -68,10 +68,10 @@ function foodOrdering() {
                             <br></br>
                             Built a robust and scalable frontend using React, React Router, and TypeScript, focusing on key areas such as dynamic routing, secure authentication, and responsive UI design to ensure an exceptional user experience.</p>
                         </div>
-                        <div><Image src={food1} className="rounded-xl shadow-lg md:-mt-12 md:ml-12" /></div>
+                        <div><Image src={food1} className="rounded-xl shadow-lg md:-mt-12 md:ml-12" alt="img"/></div>
                     </div>
                     <div className=" w-full border-2 border-sky-500 rounded-md shadow-lg shadow-indigo-500/50 dark:text-white p-4 grid-cols-1 md:grid grid-cols-3 gap-4 mb-8">
-                        <div><Image src={food2} className="rounded-xl shadow-lg md:-mb-8 md:-ml-12" /></div>
+                        <div><Image src={food2} className="rounded-xl shadow-lg md:-mb-8 md:-ml-12" alt="img"/></div>
                         <div className="col-span-2 text-center flex items-center ">
                             <div>
                             <h1 className="text-3xl mb-4">Database</h1>
@@ -89,10 +89,10 @@ function foodOrdering() {
                         confidentiality and compliance with best practices.</p>
                             </div>
                         </div>
-                        <div><Image src={food3} className="rounded-xl shadow-lg md:-mt-8 md:ml-12" /></div>
+                        <div><Image src={food3} className="rounded-xl shadow-lg md:-mt-8 md:ml-12" alt="img"/></div>
                     </div>
                     <div className=" w-full border-2 border-sky-500 rounded-md shadow-lg shadow-indigo-500/50 dark:text-white p-4 grid-cols-1 md:grid grid-cols-3 gap-4 mb-8">
-                        <div><Image src={food4} className="rounded-xl shadow-lg md:-mb-8 md:-ml-12" /></div>
+                        <div><Image src={food4} className="rounded-xl shadow-lg md:-mb-8 md:-ml-12" alt="img"/></div>
                         <div className="col-span-2 text-center flex items-center ">
                             <div>
                             <h1 className="text-3xl mb-4">Authentication</h1>
@@ -110,7 +110,7 @@ function foodOrdering() {
                             of screen resolutions.</p>
                             </div>
                         </div>
-                        <div><Image src={food5} className="rounded-xl shadow-lg md:-mt-8 md:ml-12" /></div>
+                        <div><Image src={food5} className="rounded-xl shadow-lg md:-mt-8 md:ml-12" alt="img"/></div>
                     </div>
 
                 </section>
@@ -119,4 +119,4 @@ function foodOrdering() {
     )
 }
 
-export default foodOrdering;
+export default FoodOrdering;

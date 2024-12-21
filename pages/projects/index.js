@@ -31,7 +31,7 @@ function Projects() {
             </Head>
             <main className=" bg-white px-10 dark:bg-gray-900">
             <nav className="py-10 mb-12 gap-8 flex flex-wrap  justify-between dark:text-white md:px-20 lg:px-40">
-            <h1 className="font-burtons text-xl text-center w-full md:w-auto"><Link href='/'>harshit'sPortfolio</Link></h1>
+            <h1 className="font-burtons text-xl text-center w-full md:w-auto"><Link href='/'>harshit&apos;sPortfolio</Link></h1>
             <ul className="flex flex-wrap items-center justify-center gap-4 w-full md:w-auto">
             <li>
                 <Link href='/education'>EDUCATION</Link>
@@ -78,7 +78,7 @@ function Projects() {
                                 </div>
 
                             </div> */}
-                            <Image src={design} width={1000} height={100} className="rounded-xl -m-8 shadow-lg" />
+                            <Image src={design} width={1000} height={100} className="rounded-xl -m-8 shadow-lg" alt="img"/>
                                 <div className="flex ml-auto text-5xl text-blue-500 bg-white border-2 border-sky-500 -mr-2 rounded-xl">
                                     <a href="https://mern-food-ordering-app-frontend-r3on.onrender.com/" target="_blank"
                                 rel="noopener noreferrer"><AiOutlineExport></AiOutlineExport></a>
@@ -108,7 +108,7 @@ function Projects() {
                             </Link>
                         </div>
                         <div className="text-center shadow-lg rounded-xl my-10 dark:bg-white flex-1 flex flex-col">
-                            <Image src={meetups} width={1000} height={100} className="rounded-xl -m-8 shadow-lg" /> 
+                            <Image src={meetups} width={1000} height={100} className="rounded-xl -m-8 shadow-lg" alt="img"/> 
                              <div className="flex ml-auto text-5xl text-blue-500 bg-white border-2 border-sky-500 -mr-2 rounded-xl">
                                     <a href="http://nextjs-meetups-pi-ten.vercel.app/" target="_blank"
                                 rel="noopener noreferrer"><AiOutlineExport></AiOutlineExport></a>
@@ -134,7 +134,7 @@ function Projects() {
                         </div>
 
                         <div className="text-center shadow-lg  rounded-xl my-10  dark:bg-white flex-1 flex flex-col">
-                        <Image src={quotes} width={1400} height={100} className="rounded-xl -m-8 shadow-lg" />
+                        <Image src={quotes} width={1400} height={100} className="rounded-xl -m-8 shadow-lg" alt="img"/>
                             <div className="flex ml-auto text-5xl text-blue-500 bg-white border-2 border-sky-500 -mr-2 rounded-xl">
                                     <a href="http://hosting-a608c.web.app/" target="_blank"
                                 rel="noopener noreferrer"> <AiOutlineExport></AiOutlineExport></a>
