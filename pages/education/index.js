@@ -33,7 +33,7 @@ function Education() {
                     <h1 className="font-burtons text-xl text-center w-full md:w-auto"><Link href='/'>harshit&apos;sPortfolio</Link></h1>
                     <ul className="flex flex-wrap items-center justify-center gap-4 w-full md:w-auto">
                         <li>
-                            <Link href='/projects'>EDUCATION</Link>
+                            <Link href='/education'>EDUCATION</Link>
                         </li>
                         <li>
                             <Link href='/projects' className="ml-8">PROJECTS</Link>

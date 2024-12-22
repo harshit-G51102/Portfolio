@@ -1,4 +1,5 @@
 import Head from "next/head";
+import gsap from "gsap";
 import {
 
   AiFillLinkedin,
@@ -8,7 +9,7 @@ import {
   AiFillCopyrightCircle,
 } from "react-icons/ai";
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import { useState } from "react";
+import { useState,useRef } from "react";
 import deved from "../public/hg.png";
 
 import Image from "next/image";
@@ -18,17 +19,68 @@ import Link from "next/link";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
+  const headingRef = useRef(null); 
   useEffect(() => {
     const storedDarkMode = localStorage.getItem("darkMode");
     if (storedDarkMode !== null) {
       setDarkMode(JSON.parse(storedDarkMode));
     }
   }, []);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl1 = gsap.timeline();
+      const tl2 = gsap.timeline();
+      tl1.from(headingRef.current, {
+        y: -50, 
+        opacity: 0, 
+        duration: .5,
+        ease: "power2.out",
+      }).from("li", {
+        y: -50, 
+        opacity: 0, 
+        duration: .5,
+        ease: "power2.out",
+        stagger:.25
+      }).from("h2", {
+        y:-20,
+        opacity: 0, 
+        duration: .5,
+      }).from("h3", {
+        y:-20,
+        opacity: 0, 
+        duration: 1,
+      }).from("p", {
+        y:-20,
+        opacity: 0, 
+        duration: 1,
+      }).from(".pic", {
+        
+        opacity: 0, 
+        duration: 1.5,
+      }).from(".links", {
+        y:-50,
+        opacity: 0, 
+        duration: 1.5,
+        stagger:.25
+      });
+
+
+    });
+      return () => ctx.revert();
+  }, []);
+
+
+
   const toggleDarkMode = () => {
     const newDarkMode = !darkMode;
     setDarkMode(newDarkMode);
     localStorage.setItem("darkMode", JSON.stringify(newDarkMode));
   };
+
+
+
+
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -38,9 +90,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className=" bg-white px-10 dark:bg-gray-900">
-        <section className="min-h-screen">
+        <section className="min-h-screen lg:pr-16">
           <nav className="py-10 mb-12 gap-8 flex flex-wrap  justify-between dark:text-white md:px-20 lg:px-40">
-            <h1 className="font-burtons text-xl text-center w-full md:w-auto"><Link href='/'>harshit&apos;sPortfolio</Link></h1>
+            <h1 ref={headingRef}  className="font-burtons text-xl text-center w-full md:w-auto"><Link href='/'>harshit&apos;sPortfolio</Link></h1>
             <ul className="flex flex-wrap items-center justify-center gap-4 w-full md:w-auto">
             <li>
                 <Link href='/education'>EDUCATION</Link>
@@ -66,7 +118,7 @@ export default function Home() {
               </li>
             </ul>
           </nav>
-          <div className="text-center grid grid-cols-1  md:grid-cols-4 gap-0">
+          <div className="text-center grid grid-cols-1  lg:grid-cols-4 gap-0">
             <div className="col-span-3">
               <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
                 Harshit Gangwar
@@ -78,12 +130,12 @@ export default function Home() {
                 Ambitious third-year B.Tech student at IIIT Jabalpur, with a keen interest in software development and a passion for solving complex problems through efficient coding solutions. Strong foundation in programming and logical thinking,constantly enhancing skills to excel in roles involving software development and web technologies.
               </p>
               <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-                <a href="https://github.com/harshit-G51102"> <AiFillGithub></AiFillGithub></a>
-                <a href="https://www.linkedin.com/in/harshit-gangwar-5ab56b252/"><AiFillLinkedin /></a>
-                <a href="https://leetcode.com/u/74RFdo6xK0/"><AiFillCopyrightCircle></AiFillCopyrightCircle></a>
+                <a className="links" href="https://github.com/harshit-G51102"> <AiFillGithub></AiFillGithub></a>
+                <a className="links" href="https://www.linkedin.com/in/harshit-gangwar-5ab56b252/"><AiFillLinkedin /></a>
+                <a className="links"href="https://leetcode.com/u/74RFdo6xK0/"><AiFillCopyrightCircle></AiFillCopyrightCircle></a>
               </div>
             </div>
-            <div className="col-span-1 mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 relative overflow-hidden mt-0 md:h-80 md:w-80 animate-glow">
+            <div className="pic col-span-1 mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 relative overflow-hidden mt-0 md:h-80 md:w-80 animate-glow">
               <Image src={deved} layout="fill" objectFit="cover" alt="img"/>
             </div>
           </div>
