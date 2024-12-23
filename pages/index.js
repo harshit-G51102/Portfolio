@@ -10,7 +10,7 @@ import {
 } from "react-icons/ai";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { useState,useRef } from "react";
-import deved from "../public/hg.png";
+import hg from "../public/hg2.png";
 
 import Image from "next/image";
 
@@ -27,48 +27,48 @@ export default function Home() {
     }
   }, []);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl1 = gsap.timeline();
-      const tl2 = gsap.timeline();
-      tl1.from(headingRef.current, {
-        y: -50, 
-        opacity: 0, 
-        duration: .5,
-        ease: "power2.out",
-      }).from("li", {
-        y: -50, 
-        opacity: 0, 
-        duration: .5,
-        ease: "power2.out",
-        stagger:.25
-      }).from("h2", {
-        y:-20,
-        opacity: 0, 
-        duration: .5,
-      }).from("h3", {
-        y:-20,
-        opacity: 0, 
-        duration: 1,
-      }).from("p", {
-        y:-20,
-        opacity: 0, 
-        duration: 1,
-      }).from(".pic", {
+  // useEffect(() => {
+  //   const ctx = gsap.context(() => {
+  //     const tl1 = gsap.timeline();
+  //     const tl2 = gsap.timeline();
+  //     tl1.from(headingRef.current, {
+  //       y: -50, 
+  //       opacity: 0, 
+  //       duration: .5,
+  //       ease: "power2.out",
+  //     }).from("li", {
+  //       y: -50, 
+  //       opacity: 0, 
+  //       duration: .5,
+  //       ease: "power2.out",
+  //       stagger:.25
+  //     }).from("h2", {
+  //       y:-20,
+  //       opacity: 0, 
+  //       duration: .5,
+  //     }).from("h3", {
+  //       y:-20,
+  //       opacity: 0, 
+  //       duration: 1,
+  //     }).from("p", {
+  //       y:-20,
+  //       opacity: 0, 
+  //       duration: 1,
+  //     }).from(".pic", {
         
-        opacity: 0, 
-        duration: 1.5,
-      }).from(".links", {
-        y:-50,
-        opacity: 0, 
-        duration: 1.5,
-        stagger:.25
-      });
+  //       opacity: 0, 
+  //       duration: 1.5,
+  //     }).from(".links", {
+  //       y:-50,
+  //       opacity: 0, 
+  //       duration: 1.5,
+  //       stagger:.25
+  //     });
 
 
-    });
-      return () => ctx.revert();
-  }, []);
+  //   });
+  //     return () => ctx.revert();
+  // }, []);
 
 
 
@@ -135,9 +135,9 @@ export default function Home() {
                 <a className="links"href="https://leetcode.com/u/74RFdo6xK0/"><AiFillCopyrightCircle></AiFillCopyrightCircle></a>
               </div>
             </div>
-            <div className="pic col-span-1 mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 relative overflow-hidden mt-0 md:h-80 md:w-80 animate-glow">
-              <Image src={deved} layout="fill" objectFit="cover" alt="img"/>
-            </div>
+            <Image className="pic col-span-1 mx-auto rounded-full w-60 h-60   mt-0 md:h-80 md:w-80 animate-glow" src={hg}  alt="img"/>
+
+            
           </div>
         </section>
 
