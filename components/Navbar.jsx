@@ -5,10 +5,10 @@ import { useEffect } from "react";
 
 const Navbar = ({ darkMode, toggleDarkMode,isanimate }) => {
 
-  {isanimate&&useEffect(() => {
+  useEffect(() => {
     const ctx = gsap.context(() => {
       const tl1 = gsap.timeline();
-      tl1.from(".navh", {
+      {isanimat&&tl1.from(".navh", {
         y:-20,
         opacity: 0, 
         duration: .5,
@@ -17,11 +17,11 @@ const Navbar = ({ darkMode, toggleDarkMode,isanimate }) => {
         opacity: 0, 
         duration: .5,
         stagger:0.25
-      });
+      });}
 
     });
       return () => ctx.revert();
-  }, []);}
+  }, []);
 
 
   return (
