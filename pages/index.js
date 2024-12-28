@@ -64,7 +64,7 @@ export default function Home() {
       </Head>
       <main className="bg-white px-10 dark:bg-gray-900">
         <section className="min-h-screen lg:pr-16">
-          <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+          <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isanimate={true}/>
           <div className="text-center grid grid-cols-1 lg:grid-cols-4 gap-0">
             <div className="col-span-3">
               <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
