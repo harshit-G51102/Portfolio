@@ -8,7 +8,7 @@ const Navbar = ({ darkMode, toggleDarkMode,isanimate }) => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl1 = gsap.timeline();
-      {isanimat&&tl1.from(".navh", {
+      {isanimate&&tl1.from(".navh", {
         y:-20,
         opacity: 0, 
         duration: .5,
