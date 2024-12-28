@@ -1,7 +1,29 @@
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import Link from "next/link";
+import gsap from "gsap";
+import { useEffect } from "react";
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl1 = gsap.timeline();
+      tl1.from("h1", {
+        y:-20,
+        opacity: 0, 
+        duration: .5,
+      }).from("li", {
+        y:-20,
+        opacity: 0, 
+        duration: .5,
+        stagger:0.25
+      });
+
+    });
+      return () => ctx.revert();
+  }, []);
+
+
   return (
     <nav className="py-10 mb-12 gap-8 flex flex-wrap justify-between dark:text-white md:px-20 lg:px-40">
       <h1 className="font-burtons text-xl text-center w-full md:w-auto">

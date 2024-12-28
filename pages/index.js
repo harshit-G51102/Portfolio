@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Image from "next/image";
 import { AiFillLinkedin, AiFillGithub, AiFillCopyrightCircle } from "react-icons/ai";
 import hg from "../public/hg2.png";
+import gsap from "gsap";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -16,48 +17,38 @@ export default function Home() {
   }, []);
 
 
-  // useEffect(() => {
-  //   const ctx = gsap.context(() => {
-  //     const tl1 = gsap.timeline();
-  //     const tl2 = gsap.timeline();
-  //     tl1.from(headingRef.current, {
-  //       y: -50, 
-  //       opacity: 0, 
-  //       duration: .5,
-  //       ease: "power2.out",
-  //     }).from("li", {
-  //       y: -50, 
-  //       opacity: 0, 
-  //       duration: .5,
-  //       ease: "power2.out",
-  //       stagger:.25
-  //     }).from("h2", {
-  //       y:-20,
-  //       opacity: 0, 
-  //       duration: .5,
-  //     }).from("h3", {
-  //       y:-20,
-  //       opacity: 0, 
-  //       duration: 1,
-  //     }).from("p", {
-  //       y:-20,
-  //       opacity: 0, 
-  //       duration: 1,
-  //     }).from(".pic", {
-        
-  //       opacity: 0, 
-  //       duration: 1.5,
-  //     }).from(".links", {
-  //       y:-50,
-  //       opacity: 0, 
-  //       duration: 1.5,
-  //       stagger:.25
-  //     });
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl1 = gsap.timeline();
+      tl1.from("h2", {
+        y:-20,
+        opacity: 0, 
+        duration: .5,
+        delay:1
+      }).from("h3", {
+        y:-20,
+        opacity: 0, 
+        duration: 1,
+      }).from("p", {
+        y:-20,
+        opacity: 0, 
+        duration: 1,
+      }).from(".pic", {
+        scale:1.5,
+        opacity: 0, 
+        duration: .5,
+      }).from(".links", {
+        y:-50,
+        opacity: 0, 
+        duration: 1.5,
+        stagger:.25
+      });
 
 
-  //   });
-  //     return () => ctx.revert();
-  // }, []);
+    });
+      return () => ctx.revert();
+  }, []);
+
   const toggleDarkMode = () => {
     const newDarkMode = !darkMode;
     setDarkMode(newDarkMode);
