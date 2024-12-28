@@ -79,7 +79,7 @@ function Projects() {
 
                             >
                                 Details
-                            </Link>
+                            </Link> 
                         </div>
                         <div className="text-center shadow-lg rounded-xl my-10 dark:bg-white flex-1 flex flex-col">
                             <Image src={meetups} width={1000} height={100} className="rounded-xl -m-4 md:-m-8 shadow-lg" alt="img" />
