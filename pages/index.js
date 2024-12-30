@@ -20,24 +20,32 @@ export default function Home() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl1 = gsap.timeline();
-      tl1.from("h2", {
-        y:-20,
-        opacity: 0, 
-        duration: .5,
-        delay:1
-      }).from("h3", {
-        y:-20,
-        opacity: 0, 
-        duration: 1,
-      }).from("p", {
-        y:-20,
-        opacity: 0, 
-        duration: 1,
-      }).from(".pic", {
+      gsap.from("h2", {
         scale:1.5,
-        opacity: 0, 
-        duration: .5,
-      }).from(".links", {
+        // y:-20,
+        // opacity: 0, 
+        // duration: .5,
+        // delay:1
+      });
+      gsap.from("h3", {
+        scale:1.5,
+        // y:-20,
+        // opacity: 0, 
+        // duration: 1,
+      });
+      gsap.from("p", {
+        scale:1.5,
+        // y:-20,
+        // opacity: 0, 
+        // duration: 1,
+      });
+      gsap.from(".pic", {
+        scale:1.5,
+        // scale:1.5,
+        // opacity: 0, 
+        // duration: .5,
+      });
+      gsap.from(".links", {
         y:-50,
         opacity: 0, 
         duration: 1.5,
