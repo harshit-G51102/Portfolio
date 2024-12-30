@@ -30,7 +30,7 @@ function FoodOrdering() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className=" bg-white px-10 dark:bg-gray-900 min-h-[100vh] pb-8">
-            <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+            <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isanimate={false}/>
                 <section>
                     <div className="text-center md:px-40 mb-20">
                         <h3 className="text-3xl py-1 dark:text-white ">MERN Food Ordering Project</h3>
