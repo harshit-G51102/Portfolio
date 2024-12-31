@@ -33,7 +33,7 @@ function Projects() {
                 <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isanimate={false} />
                 <section>
                     <div className="text-center md:px-40">
-                        <h3 className="text-3xl py-1 dark:text-white ">Projects Showcase</h3>
+                        <h3 className="text-5xl font-bold py-1 dark:text-white ">Projects Showcase</h3>
                         <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
                             Explore my collection of projects highlighting my skills in programming, problem-solving, and web development. Each project reflects my dedication to learning and creating efficient software solutions.
                         </p>
@@ -41,7 +41,7 @@ function Projects() {
                             Dive into my journey as a third-year B.Tech student at IIIT Jabalpur, showcasing real-world applications and innovative designs built with modern technologies.
                         </p>
                     </div>
-                    <div className="grid-cols-1 sm:grid grid-cols-2 md:grid grid-cols-3 gap-10 md:p-10 pb-10" >
+                    <div className="grid-cols-1 lg:grid grid-cols-3 md:grid grid-cols-2 gap-10 md:p-10 pb-10" >
                         <div className="text-center shadow-lg  rounded-xl my-10  dark:bg-white flex-1 flex flex-col">
                             {/* <div className="relative h-56 w-full text-5xl group rounded-xl md:-m-8 shadow-lg bg-[url('/merneats.png')] bg-cover bg-center">
                                 <div className="absolute rounded-xl inset-0 group-hover:bg-white group-hover:bg-opacity-50 "></div>
