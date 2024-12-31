@@ -21,22 +21,22 @@ export default function Home() {
     const ctx = gsap.context(() => {
       const tl1 = gsap.timeline();
       gsap.from("h2", {
-        scale:1.5,
-        // y:-20,
-        // opacity: 0, 
+        // scale:1.5,
+        y:-60,
+        opacity: 0, 
         // duration: .5,
         // delay:1
       });
       gsap.from("h3", {
-        scale:1.5,
-        // y:-20,
-        // opacity: 0, 
+        // scale:1.5,
+        y:-60,
+        opacity: 0, 
         // duration: 1,
       });
       gsap.from("p", {
-        scale:1.5,
-        // y:-20,
-        // opacity: 0, 
+        // scale:1.5,
+        y:-60,
+        opacity: 0, 
         // duration: 1,
       });
       gsap.from(".pic", {
@@ -70,10 +70,10 @@ export default function Home() {
         <meta name="description" content="Harshit Gangwar's Portfolio Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-white px-10 dark:bg-gray-900">
+      <main className="bg-white px-4 md:px-10 dark:bg-gray-900">
         <section className="min-h-screen lg:pr-16">
           <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isanimate={true}/>
-          <div className="text-center grid grid-cols-1 lg:grid-cols-4 gap-0">
+          <div className="text-center grid grid-cols-1 lg:grid-cols-4 gap-0 mt-12">
             <div className="col-span-3">
               <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
                 Harshit Gangwar
