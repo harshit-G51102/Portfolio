@@ -33,7 +33,7 @@ function Projects() {
                 <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isanimate={false} />
                 <section>
                     <div className="text-center md:px-40">
-                        <h3 className="text-3xl py-1 dark:text-white ">Projects Showcase</h3>
+                        <h3 className="text-5xl font-bold py-1 dark:text-white ">Projects Showcase</h3>
                         <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
                             Explore my collection of projects highlighting my skills in programming, problem-solving, and web development. Each project reflects my dedication to learning and creating efficient software solutions.
                         </p>

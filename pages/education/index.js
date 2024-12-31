@@ -27,11 +27,11 @@ function Education() {
                 <meta name="description" content="My Education" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className=" bg-white px-10 dark:bg-gray-900 min-h-[100vh] pb-8">
+            <main className=" bg-white px-4 md:px-10 dark:bg-gray-900 min-h-[100vh] pb-8">
             <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isanimate={false}/>
                 <section>
                     <div className="text-center md:px-40 mb-20">
-                        <h3 className="text-3xl py-1 dark:text-white ">EDUCATION</h3>
+                        <h3 className="text-5xl font-bold py-1 dark:text-white ">EDUCATION</h3>
                     </div>
                     <div className=" w-full border-2 border-sky-500 rounded-md shadow-lg shadow-indigo-500/50 dark:text-white p-4 grid-cols-1 md:grid grid-cols-3 gap-4 mb-8">
                         <div className="col-span-2 text-center flex  items-center">
