@@ -42,7 +42,7 @@ function Projects() {
                         </p>
                     </div>
                     <div className="grid-cols-1 sm:grid grid-cols-2 md:grid grid-cols-3 gap-10 md:p-10 pb-10" >
-                        <div className="text-center shadow-lg  rounded-xl my-10  dark:bg-white flex-1 flex flex-col border-2 border-sky-500 shadow-indigo-500/50">
+                        <div className="text-center shadow-lg  rounded-xl my-10  dark:bg-white flex-1 flex flex-col border-2  border-teal-600 shadow-indigo-500/50">
                             {/* <div className="relative h-56 w-full text-5xl group rounded-xl md:-m-8 shadow-lg bg-[url('/merneats.png')] bg-cover bg-center">
                                 <div className="absolute rounded-xl inset-0 group-hover:bg-white group-hover:bg-opacity-50 "></div>
 
@@ -53,12 +53,12 @@ function Projects() {
 
                             </div> */}
                             <Image src={design} width={1000} height={100} className="rounded-xl -m-4 md:-m-8 shadow-lg" alt="img" />
-                            <div className="flex flex-col gap-2 ml-auto text-5xl text-blue-500 bg-none -mt-28 -mr-1 rounded-xl">
-                                <a className="bg-white animate-bounce border-2 border-sky-500 rounded-xl shadow-lg shadow-indigo-500/50" href="https://mern-food-ordering-app-frontend-r3on.onrender.com/" target="_blank"
+                            <div className="flex flex-col gap-2 ml-auto text-5xl text-teal-600 bg-none -mt-28 -mr-1 rounded-xl">
+                                <a className="bg-white animate-bounce border-2 border-teal-600 rounded-xl shadow-lg shadow-indigo-500/50" href="https://mern-food-ordering-app-frontend-r3on.onrender.com/" target="_blank"
                                     rel="noopener noreferrer" style={{ animationDelay: '0.6s' }}><AiOutlineExport></AiOutlineExport></a>
-                                <a className="bg-white animate-bounce border-2 border-sky-500 rounded-xl shadow-lg shadow-indigo-500/50" href="https://github.com/harshit-G51102/mern-food-ordering-app-frontend" target="_blank"
+                                <a className="bg-white animate-bounce border-2 border-teal-600 rounded-xl shadow-lg shadow-indigo-500/50" href="https://github.com/harshit-G51102/mern-food-ordering-app-frontend" target="_blank"
                                     rel="noopener noreferrer" style={{ animationDelay: '0.4s' }}><AiFillGithub></AiFillGithub></a>
-                                <a className="bg-white animate-bounce border-2 border-sky-500 rounded-xl shadow-lg shadow-indigo-500/50" href="https://github.com/harshit-G51102/mern-food-ordering-app-backend" target="_blank"
+                                <a className="bg-white animate-bounce border-2 border-teal-600 rounded-xl shadow-lg shadow-indigo-500/50" href="https://github.com/harshit-G51102/mern-food-ordering-app-backend" target="_blank"
                                     rel="noopener noreferrer" style={{ animationDelay: '0.2s' }}><AiFillGithub></AiFillGithub></a>
                             </div>
                             <div className=" flex-grow">
@@ -85,12 +85,12 @@ function Projects() {
                                 Details
                             </Link>
                         </div>
-                        <div className="text-center shadow-lg rounded-xl my-10 dark:bg-white flex-1 flex flex-col border-2 border-sky-500 shadow-indigo-500/50">
+                        <div className="text-center shadow-lg rounded-xl my-10 dark:bg-white flex-1 flex flex-col border-2 border-teal-600 shadow-indigo-500/50">
                             <Image src={meetups} width={1000} height={100} className="rounded-xl -m-4 md:-m-8 shadow-lg" alt="img" />
-                            <div className="flex flex-col gap-2 ml-auto text-5xl text-blue-500 bg-none -mt-14 -mr-1 rounded-xl">
-                                <a className="bg-white animate-bounce border-2 border-sky-500 rounded-xl shadow-lg shadow-indigo-500/50" href="http://nextjs-meetups-pi-ten.vercel.app/" target="_blank"
+                            <div className="flex flex-col gap-2 ml-auto text-5xl text-teal-600 bg-none -mt-14 -mr-1 rounded-xl">
+                                <a className="bg-white animate-bounce border-2 border-teal-600 rounded-xl shadow-lg shadow-indigo-500/50" href="http://nextjs-meetups-pi-ten.vercel.app/" target="_blank"
                                     rel="noopener noreferrer" style={{ animationDelay: '0.4s' }}><AiOutlineExport></AiOutlineExport></a>
-                                <a className="bg-white animate-bounce border-2 border-sky-500 rounded-xl shadow-lg shadow-indigo-500/50" href="https://github.com/harshit-G51102/nextjs-meetups.git" target="_blank"
+                                <a className="bg-white animate-bounce border-2 border-teal-600 rounded-xl shadow-lg shadow-indigo-500/50" href="https://github.com/harshit-G51102/nextjs-meetups.git" target="_blank"
                                     rel="noopener noreferrer" style={{ animationDelay: '0.2s' }}><AiFillGithub></AiFillGithub></a>
 
                             </div>
@@ -113,12 +113,12 @@ function Projects() {
                             </Link>
                         </div>
 
-                        <div className="text-center shadow-lg  rounded-xl my-10  dark:bg-white flex-1 flex flex-col border-2 border-sky-500 shadow-indigo-500/50">
+                        <div className="text-center shadow-lg  rounded-xl my-10  dark:bg-white flex-1 flex flex-col border-2 border-teal-600 shadow-indigo-500/50">
                             <Image src={quotes} width={1400} height={100} className="rounded-xl -m-4 md:-m-8 shadow-lg" alt="img" />
-                            <div className="flex flex-col gap-2 ml-auto text-5xl text-blue-500 bg-none -mt-14 -mr-1 rounded-xl">
-                                <a className="bg-white animate-bounce border-2 border-sky-500 rounded-xl shadow-lg shadow-indigo-500/50" href="http://hosting-a608c.web.app/" target="_blank"
+                            <div className="flex flex-col gap-2 ml-auto text-5xl text-teal-600 bg-none -mt-14 -mr-1 rounded-xl">
+                                <a className="bg-white animate-bounce border-2 border-teal-600 rounded-xl shadow-lg shadow-indigo-500/50" href="http://hosting-a608c.web.app/" target="_blank"
                                     rel="noopener noreferrer" style={{ animationDelay: '0.4s'}}> <AiOutlineExport></AiOutlineExport></a>
-                                <a className="bg-white animate-bounce border-2 border-sky-500 rounded-xl shadow-lg shadow-indigo-500/50" href="https://github.com/harshit-G51102/react-router-quotes" target="_blank"
+                                <a className="bg-white animate-bounce border-2 border-teal-600 rounded-xl shadow-lg shadow-indigo-500/50" href="https://github.com/harshit-G51102/react-router-quotes" target="_blank"
                                     rel="noopener noreferrer" style={{ animationDelay: '0.2s' }}><AiFillGithub></AiFillGithub></a>
 
                             </div>
