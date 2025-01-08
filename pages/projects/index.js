@@ -7,6 +7,7 @@ import Image from "next/image";
 import Navbar from "../../components/Navbar";
 import Link from "next/link";
 import { AiFillCarryOut, AiFillGithub, AiOutlineExport } from "react-icons/ai";
+import gsap from "gsap";
 
 
 function Projects() {
@@ -22,6 +23,41 @@ function Projects() {
         setDarkMode(newDarkMode);
         localStorage.setItem("darkMode", JSON.stringify(newDarkMode));
     };
+
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.from(".phead", {
+                y:-20,
+                opacity: 0, 
+                duration:1
+              });
+              gsap.from(".ptext", {
+                y:-20,
+                opacity: 0, 
+                duration:1
+              });
+        
+          gsap.from(".proj1", {
+            scale:1.2,
+            opacity: 0, 
+            duration:1,
+            delay:1
+          });
+          gsap.from(".proj2", {
+            scale:1.2,
+            opacity: 0, 
+            duration:1
+          });
+          gsap.from(".proj3", {
+            scale:1.2,
+            opacity: 0, 
+            duration:1
+          });
+    
+        });
+          return () => ctx.revert();
+      }, []);
     return (
         <div className={darkMode ? "dark" : ""}>
             <Head>
@@ -29,29 +65,20 @@ function Projects() {
                 <meta name="description" content="My Projects" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className=" bg-white px-4 md:px-10 dark:bg-gray-900">
+            <main className=" bg-white px-4 md:px-10 dark:bg-gray-900 overflow-hidden">
                 <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isanimate={false} />
                 <section>
                     <div className="text-center md:px-40">
-                        <h3 className="text-5xl font-bold py-1 dark:text-white ">Projects Showcase</h3>
-                        <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+                        <h3 className="phead text-5xl font-bold py-1 dark:text-white ">Projects Showcase</h3>
+                        <p className="ptext text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
                             Explore my collection of projects highlighting my skills in programming, problem-solving, and web development. Each project reflects my dedication to learning and creating efficient software solutions.
                         </p>
-                        <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+                        <p className="ptext text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
                             Dive into my journey as a third-year B.Tech student at IIIT Jabalpur, showcasing real-world applications and innovative designs built with modern technologies.
                         </p>
                     </div>
-                    <div className="grid-cols-1 sm:grid grid-cols-2 md:grid grid-cols-3 gap-10 md:p-10 pb-10" >
+                    <div className="proj1 grid-cols-1 sm:grid grid-cols-2 md:grid grid-cols-3 gap-10 md:p-10 pb-10" >
                         <div className="text-center shadow-lg  rounded-xl my-10  dark:bg-white flex-1 flex flex-col border-2  border-teal-600 shadow-indigo-500/50">
-                            {/* <div className="relative h-56 w-full text-5xl group rounded-xl md:-m-8 shadow-lg bg-[url('/merneats.png')] bg-cover bg-center">
-                                <div className="absolute rounded-xl inset-0 group-hover:bg-white group-hover:bg-opacity-50 "></div>
-
-                                <div className="flex flex-row gap-4 mt-24 ml-40 absolute opacity-0 group-hover:opacity-100">
-                                <AiOutlineExport></AiOutlineExport>
-                                <AiFillGithub></AiFillGithub>
-                                </div>
-
-                            </div> */}
                             <Image src={design} width={1000} height={100} className="rounded-xl -m-4 md:-m-8 shadow-lg" alt="img" />
                             <div className="flex flex-col gap-2 ml-auto text-5xl text-teal-600 bg-none -mt-28 -mr-1 rounded-xl">
                                 <a className="bg-white animate-bounce border-2 border-teal-600 rounded-xl shadow-lg shadow-indigo-500/50" href="https://mern-food-ordering-app-frontend-r3on.onrender.com/" target="_blank"
@@ -85,7 +112,7 @@ function Projects() {
                                 Details
                             </Link>
                         </div>
-                        <div className="text-center shadow-lg rounded-xl my-10 dark:bg-white flex-1 flex flex-col border-2 border-teal-600 shadow-indigo-500/50">
+                        <div className=" proj2 text-center shadow-lg rounded-xl my-10 dark:bg-white flex-1 flex flex-col border-2 border-teal-600 shadow-indigo-500/50">
                             <Image src={meetups} width={1000} height={100} className="rounded-xl -m-4 md:-m-8 shadow-lg" alt="img" />
                             <div className="flex flex-col gap-2 ml-auto text-5xl text-teal-600 bg-none -mt-14 -mr-1 rounded-xl">
                                 <a className="bg-white animate-bounce border-2 border-teal-600 rounded-xl shadow-lg shadow-indigo-500/50" href="http://nextjs-meetups-pi-ten.vercel.app/" target="_blank"
@@ -113,7 +140,7 @@ function Projects() {
                             </Link>
                         </div>
 
-                        <div className="text-center shadow-lg  rounded-xl my-10  dark:bg-white flex-1 flex flex-col border-2 border-teal-600 shadow-indigo-500/50">
+                        <div className=" proj3 text-center shadow-lg  rounded-xl my-10  dark:bg-white flex-1 flex flex-col border-2 border-teal-600 shadow-indigo-500/50">
                             <Image src={quotes} width={1400} height={100} className="rounded-xl -m-4 md:-m-8 shadow-lg" alt="img" />
                             <div className="flex flex-col gap-2 ml-auto text-5xl text-teal-600 bg-none -mt-14 -mr-1 rounded-xl">
                                 <a className="bg-white animate-bounce border-2 border-teal-600 rounded-xl shadow-lg shadow-indigo-500/50" href="http://hosting-a608c.web.app/" target="_blank"
