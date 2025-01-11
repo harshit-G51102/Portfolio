@@ -21,29 +21,20 @@ export default function Home() {
     const ctx = gsap.context(() => {
       const tl1 = gsap.timeline();
       gsap.from("h2", {
-        // scale:1.5,
         y:-60,
         opacity: 0, 
-        // duration: .5,
-        // delay:1
       });
       gsap.from("h3", {
-        // scale:1.5,
         y:-60,
         opacity: 0, 
-        // duration: 1,
       });
       gsap.from("p", {
-        // scale:1.5,
         y:-60,
         opacity: 0, 
-        // duration: 1,
       });
       gsap.from(".pic", {
         scale:1.5,
-        // scale:1.5,
-        // opacity: 0, 
-        // duration: .5,
+       
       });
       gsap.from(".links", {
         y:-50,
