@@ -11,6 +11,7 @@ import gsap from "gsap";
 
 
 function Projects() {
+    
     const [darkMode, setDarkMode] = useState(true);
     useEffect(() => {
         const storedDarkMode = localStorage.getItem("darkMode");
@@ -18,6 +19,7 @@ function Projects() {
             setDarkMode(JSON.parse(storedDarkMode));
         }
     }, []);
+    
     const toggleDarkMode = () => {
         const newDarkMode = !darkMode;
         setDarkMode(newDarkMode);
