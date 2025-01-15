@@ -6,6 +6,7 @@ import food2 from "../../public/food2.png"
 import food3 from "../../public/food3.png"
 import food4 from "../../public/food4.png"
 import food5 from "../../public/food5.png"
+import food6 from "../../public/food6.png"
 import Image from "next/image";
 
 
@@ -84,6 +85,18 @@ function FoodOrdering() {
                             </div>
                         </div>
                         <div><Image src={food5} className="rounded-xl shadow-lg md:-mt-8 md:ml-12" alt="img"/></div>
+                    </div>
+                    <div className=" w-full border-2 border-sky-500 rounded-md shadow-lg shadow-indigo-500/50 dark:text-white p-4 grid-cols-1 md:grid grid-cols-3 gap-4 mb-8">
+                        <div><Image src={food6} className="rounded-xl shadow-lg md:-mb-8 md:-ml-12" alt="img"/></div>
+                        <div className="col-span-2 text-center flex items-center ">
+                            <div>
+                            <h1 className="text-3xl mb-4">Deployment on Render.com</h1>
+                            <p>
+                            Deployed the application on Render.com, providing a fast and reliable platform for hosting both the backend and frontend. The deployment leverages automated builds and scaling to ensure optimal performance and uptime.
+
+</p>
+                            </div>
+                        </div>
                     </div>
 
                 </section>
