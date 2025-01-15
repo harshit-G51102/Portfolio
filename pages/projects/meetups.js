@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar";
 import meetups1 from "../../public/meetups1.png"
 import meetups2 from "../../public/meetups2.png"
 import meetups3 from "../../public/meetups3.png"
+import meetups4 from "../../public/meetups4.png"
 
 import Image from "next/image";
 
@@ -63,6 +64,15 @@ function Meetups() {
                             </div>
                         </div>
                         <div><Image src={meetups3} className="rounded-xl shadow-lg md:-mt-8 md:ml-12" alt="img"/></div>
+                    </div>
+                    <div className=" w-full border-2 border-sky-500 rounded-md shadow-lg shadow-indigo-500/50 dark:text-white p-4 grid-cols-1 md:grid grid-cols-3 gap-4 mb-8">
+                        <div><Image src={meetups4} className="rounded-xl shadow-lg md:-mb-8 md:-ml-12" alt="img"/></div>
+                        <div className="col-span-2 text-center flex items-center ">
+                            <div>
+                                <h1 className="text-3xl mb-4">Deployment on Vercel</h1>
+                                <p> Deployed the application on Vercel, leveraging its optimized platform for fast builds, global CDN delivery, and automatic scaling, ensuring a reliable and high-performance user experience.</p>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
