@@ -85,6 +85,15 @@ function Quotes() {
                         </div>
                         <div><Image src={quotes5} className="rounded-xl shadow-lg md:-mt-8 md:ml-12" alt="img"/></div>
                     </div>
+                    <div className=" w-full border-2 border-sky-500 rounded-md shadow-lg shadow-indigo-500/50 dark:text-white p-4 grid-cols-1 md:grid grid-cols-3 gap-4 mb-8">
+                        <div><Image src={quotes5} className="rounded-xl shadow-lg md:-mb-8 md:-ml-12" alt="img"/></div>
+                        <div className="col-span-2 text-center flex items-center ">
+                            <div>
+                                <h1 className="text-3xl mb-4">Firebase Deployment</h1>
+                                <p>  Deployed the application using Firebase Hosting, ensuring fast and reliable access with global CDN and secure SSL encryption.</p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
         </div>
