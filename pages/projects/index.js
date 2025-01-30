@@ -125,7 +125,7 @@ function Projects() {
                 <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isanimate={false} />
                 <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="left dark:text-white flex flex-col mt-10">
-                        <h3 className="phead text-8xl font-bold py-1 dark:text-white">
+                        <h3 className="phead text-7xl md:text-8xl font-bold py-1 dark:text-white">
                             Projects Showcase
                         </h3>
                         <p className="ptext text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
@@ -136,11 +136,11 @@ function Projects() {
                         </p>
                     </div>
 
-                    <div className="right dark:text-white relative top-0 h-[100vh] md:h-screen flex flex-col items-center">
+                    <div className="right dark:text-white relative top-0 h-[55vh] md:h-screen flex flex-col items-center">
                         {cards.map((card, index) => (
                             <div
                                 key={card.id}
-                                className={`card w-[350px] h-[360px] rounded-[25px] bg-gradient-to-r ${card.gradient} shadow-lg absolute top-[15%] md:left-[25%] left-[10%]`}
+                                className={`card w-[300px] md:w-[350px] h-[360px] rounded-[25px] bg-gradient-to-r ${card.gradient} shadow-lg absolute top-[16%] md:left-[25%] left-[10%]`}
                                 style={{
                                     transform: `rotate(-${index * 10}deg)`,
                                     zIndex: cards.length - index,
