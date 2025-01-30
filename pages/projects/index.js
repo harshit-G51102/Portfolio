@@ -15,7 +15,7 @@ import gsap from "gsap";
 function Projects() {
     const [darkMode, setDarkMode] = useState(true);
 
-    
+
     // Original cards array for restoration
     const originalCards = [
         {
@@ -28,6 +28,7 @@ function Projects() {
             githubBackend: "https://github.com/harshit-G51102/mern-food-ordering-app-backend",
             detailsLink: "projects/foodOrdering",
             gradient: "from-cyan-500 to-teal-500",
+            color: "teal"
         },
         {
             id: 2,
@@ -38,6 +39,7 @@ function Projects() {
             githubFrontend: "https://github.com/harshit-G51102/nextjs-meetups.git",
             detailsLink: "projects/meetups",
             gradient: "from-pink-500 to-orange-500",
+            color: "orange"
         },
         {
             id: 3,
@@ -48,6 +50,7 @@ function Projects() {
             githubFrontend: "https://github.com/harshit-G51102/react-router-quotes",
             detailsLink: "projects/quotes",
             gradient: "from-cyan-500 to-teal-500",
+            color: "teal"
         },
         {
             id: 4,
@@ -58,33 +61,34 @@ function Projects() {
             githubFrontend: "#",
             detailsLink: "#",
             gradient: "from-pink-500 to-orange-500",
+            color: "orange"
         },
     ];
     useEffect(() => {
         const ctx = gsap.context(() => {
             gsap.from(".phead", {
-                y:-20,
-                opacity: 0, 
-                duration:1
-              });
-              gsap.from(".ptext", {
-                y:-20,
-                opacity: 0, 
-                duration:1
-              });
-        
-          gsap.from(".card", {
-            rotate:0,
-            scale:1.2,
-            opacity: 0, 
-            duration:1,
-            delay:1,
-            stagger:-0.25,
-          });
-    
+                y: -20,
+                opacity: 0,
+                duration: 1
+            });
+            gsap.from(".ptext", {
+                y: -20,
+                opacity: 0,
+                duration: 1
+            });
+
+            gsap.from(".card", {
+                rotate: 0,
+                scale: 1.2,
+                opacity: 0,
+                duration: 1,
+                delay: 1,
+                stagger: -0.25,
+            });
+
         });
-          return () => ctx.revert();
-      }, []);
+        return () => ctx.revert();
+    }, []);
 
     const [cards, setCards] = useState(originalCards);
 
@@ -121,7 +125,7 @@ function Projects() {
                 <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isanimate={false} />
                 <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="left dark:text-white flex flex-col mt-10">
-                        <h3 className="phead text-8xl font-bold py-1 dark:text-white">
+                        <h3 className="phead text-7xl md:text-8xl font-bold py-1 dark:text-white">
                             Projects Showcase
                         </h3>
                         <p className="ptext text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
@@ -132,17 +136,17 @@ function Projects() {
                         </p>
                     </div>
 
-                    <div className="right dark:text-white relative top-0 h-[100vh] md:h-screen flex flex-col items-center">
+                    <div className="right dark:text-white relative top-0 h-[55vh] md:h-screen flex flex-col items-center">
                         {cards.map((card, index) => (
                             <div
                                 key={card.id}
-                                className={`card w-[350px] h-[350px] rounded-[25px] bg-gradient-to-r ${card.gradient} text-center shadow-lg absolute top-[15%] md:left-[25%] left-[10%]`}
+                                className={`card w-[300px] md:w-[350px] h-[360px] rounded-[25px] bg-gradient-to-r ${card.gradient} shadow-lg absolute top-[16%] md:left-[25%] left-[10%]`}
                                 style={{
                                     transform: `rotate(-${index * 10}deg)`,
                                     zIndex: cards.length - index,
                                 }}
                             >
-                                <div className="flex-grow mb-4">
+                                <div className="flex-grow mb-4 text-center">
                                     <Image src={card.image} width={300} height={100} className="m-auto mt-2 rounded-xl shadow-lg" alt="img" />
                                     <h3 className="text-lg font-medium pt-1 pb-1">{card.title}</h3>
                                     <h4 className=" text-white-100">Tools</h4>
@@ -152,12 +156,51 @@ function Projects() {
                                         ))}
                                     </div>
                                 </div>
-                                <Link
-                                    className="bg-gray-900 text-white px-4 py-2 m-2 border-none rounded-md mt-auto"
-                                    href={card.detailsLink}
-                                >
-                                    Details
-                                </Link>
+                                <div className="absolute bottom-0 left-0 right-0 flex flex-row items-center justify-center p-2">
+                                    <Link
+                                        className="bg-gray-900 text-white px-4 py-2 m-2 border-none rounded-[25px] mt-auto flex-grow text-center"
+                                        href={card.detailsLink}
+                                    >
+                                        Details
+                                    </Link>
+                                    {card.githubBackend && (
+                                        <a
+                                        href={card.liveLink}
+                                        className="bg-white rounded-xl shadow-lg shadow-indigo-500/50 text-3xl mx-2 flex items-center justify-center p-2"
+                                        rel="noopener noreferrer"
+                                        style={{
+                                            color: card.color === "teal" ? "#0f766e" : "#ea580c",
+                                            border: `2px solid ${card.color === "teal" ? "#0f766e" : "#ea580c"}`
+                                        }}
+                                        >
+                                            <AiFillGithub />
+                                        </a>
+                                    )}
+                                    <a
+                                       href={card.liveLink}
+                                       className="bg-white rounded-xl shadow-lg shadow-indigo-500/50 text-3xl mx-2 flex items-center justify-center p-2"
+                                       rel="noopener noreferrer"
+                                       style={{
+                                           color: card.color === "teal" ? "#0f766e" : "#ea580c",
+                                           border: `2px solid ${card.color === "teal" ? "#0f766e" : "#ea580c"}`
+                                       }}
+                                    >
+                                        <AiFillGithub />
+                                    </a>
+                                    <a
+                                       href={card.liveLink}
+                                       className="bg-white rounded-xl shadow-lg shadow-indigo-500/50 text-3xl mx-2 flex items-center justify-center p-2"
+                                       rel="noopener noreferrer"
+                                       style={{
+                                           color: card.color === "teal" ? "#0f766e" : "#ea580c",
+                                           border: `2px solid ${card.color === "teal" ? "#0f766e" : "#ea580c"}`
+                                       }}
+                                    >
+                                        <AiOutlineExport />
+                                    </a>
+                                </div>
+
+
                             </div>
                         ))}
                         <button
