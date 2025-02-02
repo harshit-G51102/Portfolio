@@ -91,6 +91,7 @@ function Projects() {
     }, []);
 
     const [cards, setCards] = useState(originalCards);
+    const [cards2,setCards2]=useState([]);
 
     useEffect(() => {
         const storedDarkMode = localStorage.getItem("darkMode");
@@ -107,12 +108,30 @@ function Projects() {
 
     const handleNext = () => {
         if (cards.length > 0) {
-            setCards((prevCards) => prevCards.slice(1)); // Remove the first card
+            const firstCard=cards[0];
+            setCards2((prevCards)=>[firstCard,...prevCards]);
+            setCards((prevCards) => prevCards.slice(1));
+            console.log(cards);
+            console.log(cards2);
         } else {
             // If the cards array is empty, reset it to the original array
             setCards(originalCards);
+            setCards2([]);
         }
     };
+
+    const handleBack=()=>{
+        if (cards2.length > 0) {
+            const firstCard=cards2[0];
+            setCards((prevCards)=>[firstCard,...prevCards]);
+            setCards2((prevCards) => prevCards.slice(1));
+            console.log(cards);
+            console.log(cards2);
+        } else {
+            setCards(originalCards);
+            setCards2([]);
+        }
+    }
 
     return (
         <div className={darkMode ? "dark" : ""}>
@@ -140,7 +159,7 @@ function Projects() {
                         {cards.map((card, index) => (
                             <div
                                 key={card.id}
-                                className={`card w-[300px] md:w-[350px] h-[360px] rounded-[25px] bg-gradient-to-r ${card.gradient} shadow-lg absolute top-[16%] md:left-[25%] left-[10%]`}
+                                className={`card w-[300px] md:w-[350px] h-[360px] rounded-[25px] bg-gradient-to-r ${card.gradient} shadow-lg absolute top-[8%] md:left-[25%] left-[10%]`}
                                 style={{
                                     transform: `rotate(-${index * 10}deg)`,
                                     zIndex: cards.length - index,
@@ -204,11 +223,17 @@ function Projects() {
                             </div>
                         ))}
                         <button
-                            className="h-[25px] w-[100px] bg-sky-500 rounded-md mb-4 absolute left-50 mr-8"
+                            className="h-[50px] w-[50px] rounded-full mb-4 absolute mt-42 left-0 mr-8 z-10 border-2 border-blue-500 shadow-lg shadow-cyan-500"
                             onClick={handleNext}
                         >
                             Next
                         </button>
+                        {cards2.length>0 && <button
+                            className="h-[50px] w-[50px] rounded-full mb-4 absolute mt-42 right-0 mr-8 z-10 border-2 border-blue-500 shadow-lg shadow-cyan-500 "
+                            onClick={handleBack}
+                        >
+                            Back
+                        </button>}
                     </div>
                 </section>
             </main>
