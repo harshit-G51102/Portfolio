@@ -64,9 +64,8 @@ const DevProjects = () => {
             id: 4,
             title: "Portfolio Website",
             image: portfolio,
-            tools: [],
-            liveLink: "#",
-            githubFrontend: "#",
+            tools: ["Next.js", "Tailwind", "GSAP"],
+            liveLink: "https://portfolio-harshit-g51102s-projects.vercel.app/",
             detailsLink: "#",
             gradient: "from-pink-500 to-orange-500",
             color: "orange"
@@ -143,18 +142,21 @@ const DevProjects = () => {
                             <AiFillGithub />
                         </a>
                     )}
-                    <a
-                        href={card.liveLink}
-                        className="bg-white rounded-xl shadow-lg shadow-indigo-500/50 text-3xl mx-2 flex items-center justify-center p-2"
-                        rel="noopener noreferrer"
-                        style={{
-                            color: card.color === "teal" ? "#0f766e" : "#ea580c",
-                            border: `2px solid ${card.color === "teal" ? "#0f766e" : "#ea580c"}`
-                        }}
-                    >
-                        <AiFillGithub />
-                    </a>
-                    <a
+                    {card.githubFrontend && (
+                         <a
+                         href={card.liveLink}
+                         className="bg-white rounded-xl shadow-lg shadow-indigo-500/50 text-3xl mx-2 flex items-center justify-center p-2"
+                         rel="noopener noreferrer"
+                         style={{
+                             color: card.color === "teal" ? "#0f766e" : "#ea580c",
+                             border: `2px solid ${card.color === "teal" ? "#0f766e" : "#ea580c"}`
+                         }}
+                     >
+                         <AiFillGithub />
+                     </a>
+                    )}
+                    {card.liveLink && (
+                        <a
                         href={card.liveLink}
                         className="bg-white rounded-xl shadow-lg shadow-indigo-500/50 text-3xl mx-2 flex items-center justify-center p-2"
                         rel="noopener noreferrer"
@@ -165,6 +167,7 @@ const DevProjects = () => {
                     >
                         <AiOutlineExport />
                     </a>
+                    )}
                 </div>
             </div>
 
