@@ -179,7 +179,7 @@ const DevProjects = () => {
                 Next
             </button>
             {cards2.length > 0 && <button
-                className="h-[50px] w-[50px] rounded-full mb-4 absolute mt-42 right-0 mr-8 z-10 border-2 border-blue-500 shadow-lg shadow-cyan-500 "
+                className="h-[50px] w-[50px] rounded-full mb-4 absolute mt-42 right-0 z-10 border-2 border-blue-500 shadow-lg shadow-cyan-500 "
                 onClick={handleBack}
             >
                 Back
