@@ -174,7 +174,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
                 </div>
 
                 {/* Navigation Buttons */}
-                <div className="flex gap-4 pt-4">
+                <div className="flex gap-4 pt-4 mb-16">
                     <button
                         onClick={handlePrev}
                         className="border-2 border-white h-10 w-10 rounded-full bg-gray-200 dark:bg-neutral-800 flex items-center justify-center group/button"
