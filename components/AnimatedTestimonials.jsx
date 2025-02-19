@@ -43,7 +43,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
     }, []);
 
     return (
-        <div className="max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-10">
+        <div className="max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-10 mb-20  ">
             <div className="relative flex flex-col items-center">
 
                 {/* Full Width Image with Card Animation */}
