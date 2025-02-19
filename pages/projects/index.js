@@ -3,8 +3,7 @@ import Head from "next/head";
 
 import Navbar from "../../components/Navbar";
 import gsap from "gsap";
-
-import DevProjects from "../../components/DevProjects";
+import DevProjects2 from "../../components/DevProjects2";
 
 function Projects() {
     useEffect(() => {
@@ -60,7 +59,7 @@ function Projects() {
                     </div>
 
                     <div className="right dark:text-white relative top-0 h-[55vh] md:h-screen flex flex-col items-center">
-                        <DevProjects></DevProjects>
+                        <DevProjects2></DevProjects2>
                     </div>
                 </section>
             </main>
