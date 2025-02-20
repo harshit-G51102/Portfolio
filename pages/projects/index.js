@@ -58,7 +58,7 @@ function Projects() {
                         </p>
                     </div>
 
-                    <div className="right dark:text-white relative top-0 h-[55vh] md:h-screen flex flex-col items-center">
+                    <div className="right dark:text-white relative top-0 h-100vh flex flex-col items-center mb-20">
                         <DevProjects2></DevProjects2>
                     </div>
                 </section>
