@@ -43,6 +43,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
     }, []);
 
     return (
+
         <div className="max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12">
             <div className="relative flex flex-col items-center">
 
@@ -174,7 +175,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
                 </div>
 
                 {/* Navigation Buttons */}
-                <div className="flex gap-4 pt-4">
+                <div className="flex gap-4 pt-4 mb-16">
                     <button
                         onClick={handlePrev}
                         className="border-2 border-white h-10 w-10 rounded-full bg-gray-200 dark:bg-neutral-800 flex items-center justify-center group/button"
