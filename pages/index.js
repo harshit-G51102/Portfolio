@@ -5,6 +5,8 @@ import Image from "next/image";
 import { AiFillLinkedin, AiFillGithub, AiFillCopyrightCircle } from "react-icons/ai";
 import hg from "../public/hg2.png";
 import gsap from "gsap";
+import RotatingText from "../components/RotatingText";
+
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -21,31 +23,31 @@ export default function Home() {
     const ctx = gsap.context(() => {
       const tl1 = gsap.timeline();
       gsap.from("h2", {
-        y:-60,
-        opacity: 0, 
+        y: -60,
+        opacity: 0,
       });
       gsap.from("h3", {
-        y:-60,
-        opacity: 0, 
+        y: -60,
+        opacity: 0,
       });
       gsap.from("p", {
-        y:-60,
-        opacity: 0, 
+        y: -60,
+        opacity: 0,
       });
       gsap.from(".pic", {
-        scale:1.5,
-       
+        scale: 1.5,
+
       });
       gsap.from(".links", {
-        y:-50,
-        opacity: 0, 
+        y: -50,
+        opacity: 0,
         duration: 1.5,
-        stagger:.25
+        stagger: .25
       });
 
 
     });
-      return () => ctx.revert();
+    return () => ctx.revert();
   }, []);
 
   const toggleDarkMode = () => {
@@ -63,15 +65,27 @@ export default function Home() {
       </Head>
       <main className="bg-white px-4 md:px-10 dark:bg-gray-900">
         <section className="min-h-screen lg:pr-16">
-          <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isanimate={true}/>
+          <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} isanimate={true} />
           <div className="text-center grid grid-cols-1 lg:grid-cols-4 gap-0 mt-12">
             <div className="col-span-3">
-              <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
+              <h2 className="text-5xl py-4 text-teal-600 font-medium dark:text-teal-400 md:text-6xl ">
                 Harshit Gangwar
               </h2>
-              <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
-                Programming, problem-solving, web development.
-              </h3>
+              <div className="flex flex-row justify-center">
+                <span className="text-2xl mr-4 font-bold text-gray-800 dark:text-gray-200">A Passionate</span>
+                <RotatingText
+                  texts={['Programmer', 'problem-solver', 'web developer']}
+                  mainClassName="px-2 sm:px-2 md:px-3 text-xl font-bold bg-gradient-to-r from-cyan-500 to-teal-500 text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                  staggerFrom={"last"}
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  exit={{ y: "-120%" }}
+                  staggerDuration={0.025}
+                  splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                  rotationInterval={2000}
+                />
+              </div>
               <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
                 Ambitious third-year B.Tech student at IIIT Jabalpur, with a keen interest in software development and a passion for solving complex problems through efficient coding solutions. Strong foundation in programming and logical thinking, constantly enhancing skills to excel in roles involving software development and web technologies.
               </p>
