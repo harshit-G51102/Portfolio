@@ -15,7 +15,7 @@ export default function Home() {
     const storedDarkMode = localStorage.getItem("darkMode");
     if (storedDarkMode !== null) {
       setDarkMode(JSON.parse(storedDarkMode));
-    }
+    } 
   }, []);
 
 
