@@ -128,14 +128,14 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
                 </div>
                 <div className=" bottom-0 left-0 right-0 flex flex-row items-center justify-center p-2">
                     <Link
-                        className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 m-2 border-none rounded-[25px] mt-auto flex-grow text-center"
+                        className={`bg-gradient-to-r ${testimonials[active].gradient} text-white px-4 py-2 m-2 border-none rounded-[25px] mt-auto flex-grow text-center shadow-lg shadow-indigo-500/50`}
                         href={testimonials[active].detailsLink}
                     >
                         Details
                     </Link>
                     {testimonials[active].githubBackend && (
                         <a
-                            href={testimonials[active].liveLink}
+                            href={testimonials[active].githubBackend}
                             className="bg-white rounded-xl shadow-lg shadow-indigo-500/50 text-3xl mx-2 flex items-center justify-center p-2"
                             rel="noopener noreferrer"
                             style={{
@@ -148,7 +148,7 @@ export const AnimatedTestimonials = ({ testimonials, autoplay = false }) => {
                     )}
                     {testimonials[active].githubFrontend && (
                         <a
-                            href={testimonials[active].liveLink}
+                            href={testimonials[active].githubFrontend}
                             className="bg-white rounded-xl shadow-lg shadow-indigo-500/50 text-3xl mx-2 flex items-center justify-center p-2"
                             rel="noopener noreferrer"
                             style={{

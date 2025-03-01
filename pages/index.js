@@ -71,7 +71,7 @@ export default function Home() {
               <div className="rottext flex flex-row justify-center">
                 <span className="text-2xl mr-4 font-bold text-gray-800 dark:text-gray-200">A Passionate</span>
                 <RotatingText
-                  texts={['Programmer', 'problem-solver', 'web developer']}
+                  texts={['Programmer', 'Problem-solver', 'Web Developer']}
                   mainClassName="px-2 sm:px-2 md:px-3 text-xl font-bold bg-gradient-to-r from-cyan-500 to-teal-500 text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
                   staggerFrom={"last"}
                   initial={{ y: "100%" }}
