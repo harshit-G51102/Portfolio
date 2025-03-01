@@ -15,25 +15,22 @@ export default function Home() {
     const storedDarkMode = localStorage.getItem("darkMode");
     if (storedDarkMode !== null) {
       setDarkMode(JSON.parse(storedDarkMode));
-    }
+    } 
   }, []);
 
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       const tl1 = gsap.timeline();
-      gsap.from("h2", {
+      gsap.from("h2,h3,p", {
         y: -60,
         opacity: 0,
       });
-      gsap.from("h3", {
-        y: -60,
-        opacity: 0,
-      });
-      gsap.from("p", {
-        y: -60,
-        opacity: 0,
-      });
+      gsap.from(".rottext",{
+        y:-60,
+        opacity:0,
+        delay:.1
+      })
       gsap.from(".pic", {
         scale: 1.5,
 
@@ -71,10 +68,10 @@ export default function Home() {
               <h2 className="text-5xl py-4 text-teal-600 font-medium dark:text-teal-400 md:text-6xl ">
                 Harshit Gangwar
               </h2>
-              <div className="flex flex-row justify-center">
+              <div className="rottext flex flex-row justify-center">
                 <span className="text-2xl mr-4 font-bold text-gray-800 dark:text-gray-200">A Passionate</span>
                 <RotatingText
-                  texts={['Programmer', 'problem-solver', 'web developer']}
+                  texts={['Programmer', 'Problem-solver', 'Web Developer']}
                   mainClassName="px-2 sm:px-2 md:px-3 text-xl font-bold bg-gradient-to-r from-cyan-500 to-teal-500 text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
                   staggerFrom={"last"}
                   initial={{ y: "100%" }}
