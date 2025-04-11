@@ -25,7 +25,7 @@ import { AnimatedTestimonials } from "./AnimatedTestimonials";
                 id: 2,
                 title: "AI Music Recommender",
                 image: musicR,
-                tools: ["Django Rest Framework","google-genai","React","Tailwind","Aceternity ui","React Bits","React Router","vercel"],
+                tools: ["Django Rest Framework","google-gemini","React","Tailwind","Aceternity ui","React Bits","React Router","vercel"],
                 liveLink: "https://ai-music-frontend.vercel.app/",
                 githubFrontend: "https://github.com/harshit-G51102/ai-music-frontend",
                 githubBackend: "https://github.com/harshit-G51102/ai-music-backend",
