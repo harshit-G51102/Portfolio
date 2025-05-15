@@ -30,8 +30,8 @@ const testimonials = [
         liveLink: "https://ai-assistant-five-brown.vercel.app/",
         githubFrontend: "https://github.com/harshit-G51102/ai-assistant",
         detailsLink: "#",
-        gradient: "from-cyan-500 to-teal-500",
-        color: "teal"
+        gradient: "from-pink-500 to-orange-500",
+        color: "orange"
     },
     {
         id: 3,
@@ -42,8 +42,8 @@ const testimonials = [
         githubFrontend: "https://github.com/harshit-G51102/ai-music-frontend",
         githubBackend: "https://github.com/harshit-G51102/ai-music-backend",
         detailsLink: "#",
-        gradient: "from-pink-500 to-orange-500",
-        color: "orange"
+        gradient: "from-cyan-500 to-teal-500",
+        color: "teal"
     },
     {
         id: 4,
@@ -53,8 +53,8 @@ const testimonials = [
         liveLink: "https://portfolio-harshit-g51102s-projects.vercel.app/",
         githubFrontend: "https://github.com/harshit-G51102/Portfolio.git",
         detailsLink: "#",
-        gradient: "from-cyan-500 to-teal-500",
-        color: "teal"
+        gradient: "from-pink-500 to-orange-500",
+        color: "orange"
     },
     {
         id: 5,
@@ -64,8 +64,8 @@ const testimonials = [
         liveLink: "https://food-cart-hosting.web.app/",
         githubFrontend: "https://github.com/harshit-G51102/food-ordering-app.git",
         detailsLink: "#",
-        gradient: "from-pink-500 to-orange-500",
-        color: "orange"
+        gradient: "from-cyan-500 to-teal-500",
+        color: "teal"
     },
     {
         id: 6,
@@ -75,8 +75,8 @@ const testimonials = [
         liveLink: "http://hosting-a608c.web.app/",
         githubFrontend: "https://github.com/harshit-G51102/react-router-quotes",
         detailsLink: "projects/quotes",
-        gradient: "from-cyan-500 to-teal-500",
-        color: "teal"
+        gradient: "from-pink-500 to-orange-500",
+        color: "orange"
     },
     {
         id: 7,
@@ -86,8 +86,8 @@ const testimonials = [
         liveLink: "http://nextjs-meetups-pi-ten.vercel.app/",
         githubFrontend: "https://github.com/harshit-G51102/nextjs-meetups.git",
         detailsLink: "projects/meetups",
-        gradient: "from-pink-500 to-orange-500",
-        color: "orange"
+       gradient: "from-cyan-500 to-teal-500",
+        color: "teal"
     },
 
 ];
