@@ -7,8 +7,6 @@ import FoodCart from "../public/FoodCart.png";
 import aiAssistants1 from "../public/aiAssistants1.png";
 
 import { AnimatedTestimonials } from "./AnimatedTestimonials";
-
-
 const testimonials = [
     {
         id: 1,
@@ -91,8 +89,6 @@ const testimonials = [
     },
 
 ];
-
-
 const DevProjects2 = () => {
     return (
         <AnimatedTestimonials testimonials={testimonials} />
