@@ -90,7 +90,7 @@ export default function Home() {
                 />
               </div>
               <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-                Ambitious third-year B.Tech student at IIIT Jabalpur, with a keen interest in software development and a passion for solving complex problems through efficient coding solutions. Strong foundation in programming and logical thinking, constantly enhancing skills to excel in roles involving software development and web technologies.
+                Ambitious Final-year B.Tech student at IIIT Jabalpur, with a keen interest in software development and a passion for solving complex problems through efficient coding solutions. Strong foundation in programming and logical thinking, constantly enhancing skills to excel in roles involving software development and web technologies.
               </p>
               <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
                 <a className="links" href="https://github.com/harshit-G51102"><AiFillGithub /></a>
