@@ -15,7 +15,7 @@ export default function Home() {
     const storedDarkMode = localStorage.getItem("darkMode");
     if (storedDarkMode !== null) {
       setDarkMode(JSON.parse(storedDarkMode));
-    } 
+    }
   }, []);
 
 
@@ -26,10 +26,10 @@ export default function Home() {
         y: -60,
         opacity: 0,
       });
-      gsap.from(".rottext",{
-        y:-60,
-        opacity:0,
-        delay:.1
+      gsap.from(".rottext", {
+        y: -60,
+        opacity: 0,
+        delay: .1
       })
       gsap.from(".pic", {
         scale: 1.5,
@@ -56,9 +56,15 @@ export default function Home() {
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
-        <title>HARSHIT&apos;S PORTFOLIO</title>
-        <meta name="description" content="Harshit Gangwar's Portfolio Website" />
+        <title>Harshit Gangwar | Portfolio | React & Django Developer</title>
+        <meta name="description" content="Portfolio of Harshit Gangwar – React & Django Developer | B.Tech CSE @ IIITDM Jabalpur | Projects, Skills & More." />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="Harshit Gangwar | React & Django Developer" />
+        <meta property="og:description" content="Explore Harshit Gangwar's portfolio showcasing web development skills and projects." />
+        <meta property="og:image" content="/path-to-thumbnail.jpg" />
+        <meta property="og:url" content="https://portfolio-harshit-g51102s-projects.vercel.app/" />
+        <meta name="twitter:card" content="summary_large_image" />
+
       </Head>
       <main className="bg-white px-4 md:px-10 dark:bg-gray-900">
         <section className="min-h-screen lg:pr-16">
